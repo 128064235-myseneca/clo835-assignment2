@@ -1,5 +1,5 @@
 resource "aws_ecr_repository" "my_app_repo" {
-  name                 = "assignment1"
+  name                 = "assignment2"
   image_tag_mutability = "MUTABLE"
 
   image_scanning_configuration {

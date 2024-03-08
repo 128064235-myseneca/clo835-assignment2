@@ -16,6 +16,6 @@ resource "aws_instance" "web_server" {
 
 
 resource "aws_key_pair" "mykey" {
-  key_name   = "assignment-1"
-  public_key = file("assignment1.pub")
+  key_name   = "assignment-2"
+  public_key = file("assignment2.pub")
 }
