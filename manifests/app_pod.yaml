@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: web-app
+  labels:
+    app: employees
+spec:
+  containers:
+  - name: webapp
+    image: 759386766154.dkr.ecr.us-east-1.amazonaws.com/assignment2:v0.1
+    ports:
+    - containerPort: 8080
+    env:
+    - name: DBHOST
+      value: "10-244-0-29.database.pod.cluster.local"
+    # - name: DBHOST
+    #   value: "mysql-service.database.svc.cluster.local"
+    - name: DBPORT
+      value: "3306"
+    - name: DATABASE
+      value: "employees"
+    - name: DBPWD
+      value: "password"
+    - name: DBUSER
+      value: "root"
